@@ -9,15 +9,31 @@ public class BoatMovement : MonoBehaviour
     public WindZone globalWindZone;
     public Rigidbody boatRb;
 
-    public float minAngle = -35f;
-    public float maxAngle = 35f;
+    public enum State
+    {
+        AnchorDown,
+        MovingForwards,
+        WindAccelerate
+    };
+    public State state;
 
+
+    private void Start() {
+        state = State.MovingForwards;
+    }
 
     private void Update() 
     {
-        if(globalWindZone.transform.rotation == transform.rotation)
+        switch (state)
         {
-            boatRb.AddForce(Vector3.forward, ForceMode.Acceleration );
+            case State.AnchorDown:
+            boatRb.velocity = Vector3.zero;
+                break;
+            case State.MovingForwards:
+            boatRb.AddForce(Vector3.forward * 2 * Time.deltaTime, ForceMode.Force);
+                break;
+            case State.WindAccelerate:
+                break;
         }
     }
 }
