@@ -10,12 +10,6 @@ public class HandAnimationController : MonoBehaviour
 
     public Animator animator;
 
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
-
-
     void Update()
     {
         float triggerValue = pinchAnimationAction.action.ReadValue<float>();

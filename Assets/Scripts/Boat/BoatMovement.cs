@@ -3,37 +3,84 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 
+public enum BoatState
+{
+    AnchorDown,
+    MovingForwards,
+    WindAccelerate
+};
 
+[RequireComponent(typeof(Rigidbody))]
 public class BoatMovement : MonoBehaviour
 {
-    public WindZone globalWindZone;
-    public Rigidbody boatRb;
+    [HideInInspector] 
+    public BoatState boatState;
+    [HideInInspector] public bool effectedByWind;
 
-    public enum State
+    public WaterSurface water;
+
+    [Header("Speed Values")]
+    public float passiveSpeed;
+    public float windSpeed;
+    public float maxSpeed;
+    public float turnSpeed;
+
+    private Rigidbody boatRb;
+    private SteeringWheel steeringWheel;
+
+    private float currentSpeed;
+
+    private void Awake() 
     {
-        AnchorDown,
-        MovingForwards,
-        WindAccelerate
-    };
-    public State state;
-
-
-    private void Start() {
-        state = State.MovingForwards;
+        boatRb = GetComponent<Rigidbody>();
+        water = FindObjectOfType<WaterSurface>();
+        steeringWheel = GetComponentInChildren<SteeringWheel>();
     }
 
     private void Update() 
     {
-        switch (state)
+        water.transform.position =  new Vector3(transform.position.x, 0, transform.position.z);
+    }
+
+    private void FixedUpdate() 
+    {
+        if(!effectedByWind)
         {
-            case State.AnchorDown:
-            boatRb.velocity = Vector3.zero;
-                break;
-            case State.MovingForwards:
-            boatRb.AddForce(Vector3.forward * 2 * Time.deltaTime, ForceMode.Force);
-                break;
-            case State.WindAccelerate:
-                break;
+            currentSpeed += passiveSpeed * Time.deltaTime;
+            Debug.Log("Regular Speed");
+        }
+        else
+        {
+            currentSpeed += windSpeed * Time.deltaTime;
+            Debug.Log("Wind Speed");            
+        }
+
+        currentSpeed = Mathf.Clamp(currentSpeed, 0f, maxSpeed);
+
+        Vector3 forwardForce = transform.forward * currentSpeed;
+        Quaternion turnRotation = Quaternion.Euler(0f, steeringWheel.currentAngle * turnSpeed, 0f);
+
+        switch (boatState)
+        {
+            case BoatState.AnchorDown:
+
+                currentSpeed--;
+
+                if(currentSpeed <= 0)
+                {
+                    currentSpeed = 0;
+                }
+
+            break;
+
+            case BoatState.MovingForwards:
+
+            boatRb.AddForce(forwardForce, ForceMode.Force);
+
+            boatRb.MoveRotation(boatRb.rotation * turnRotation);
+
+            break;
+
         }
     }
 }
