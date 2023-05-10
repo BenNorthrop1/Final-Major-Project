@@ -21,23 +21,23 @@ MonoBehaviour:
     maxLODGenerated: 2
     initialLODMaxPolyCount: 500000
   lod0:
-  - {fileID: 0}
+  - {fileID: -7511558181221131132, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
   lod1:
-  - {fileID: 0}
+  - {fileID: 9113730919722118369, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
   lod2:
-  - {fileID: 0}
+  - {fileID: 1841184658547471531, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
   lod3: []
   lod4: []
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &5048597701954255445
+--- !u!43 &2645468060182215644
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pPyramid1 LOD1
+  m_Name: pPyramid1 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &8730847508970116484
+--- !u!43 &5103161473525466988
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pPyramid1 LOD2
+  m_Name: pPyramid1 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

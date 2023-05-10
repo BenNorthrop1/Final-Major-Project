@@ -21,23 +21,23 @@ MonoBehaviour:
     maxLODGenerated: 2
     initialLODMaxPolyCount: 500000
   lod0:
-  - {fileID: 0}
+  - {fileID: 2300000, guid: 6cd76237b8422824b95cded50cbec3fc, type: 3}
   lod1:
-  - {fileID: 0}
+  - {fileID: 5886301098200593824, guid: 6cd76237b8422824b95cded50cbec3fc, type: 3}
   lod2:
-  - {fileID: 0}
+  - {fileID: 7277572430557357900, guid: 6cd76237b8422824b95cded50cbec3fc, type: 3}
   lod3: []
   lod4: []
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &5491213713610487290
+--- !u!43 &1493897916035840324
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShellQuad LOD1
+  m_Name: ShellQuad LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &5645202444571418656
+--- !u!43 &3369164194188020434
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShellQuad LOD2
+  m_Name: ShellQuad LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

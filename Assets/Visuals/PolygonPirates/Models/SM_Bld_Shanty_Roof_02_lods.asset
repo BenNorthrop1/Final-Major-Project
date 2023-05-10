@@ -31,13 +31,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &1466841203240788152
+--- !u!43 &4493759257813790508
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Bld_Shanty_Roof_02 LOD1
+  m_Name: SM_Bld_Shanty_Roof_02 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &3985869619637871378
+--- !u!43 &5700682945439883722
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Bld_Shanty_Roof_02 LOD2
+  m_Name: SM_Bld_Shanty_Roof_02 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

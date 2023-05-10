@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-6959568494196635212
+--- !u!43 &-1132715044547032165
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Tree_Birch_Small_01 LOD2
+  m_Name: SM_Tree_Birch_Small_01 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &2190643150652980556
+--- !u!43 &424487054719635309
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Tree_Birch_Small_01 LOD1
+  m_Name: SM_Tree_Birch_Small_01 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

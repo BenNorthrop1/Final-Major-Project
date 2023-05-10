@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-766341003202798276
+--- !u!43 &-7385293036314662464
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Chr_Attach_Hat_Tacticle_01 LOD2
+  m_Name: SM_Chr_Attach_Hat_Tacticle_01 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &3990562253219443233
+--- !u!43 &6532982791680467107
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Chr_Attach_Hat_Tacticle_01 LOD1
+  m_Name: SM_Chr_Attach_Hat_Tacticle_01 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

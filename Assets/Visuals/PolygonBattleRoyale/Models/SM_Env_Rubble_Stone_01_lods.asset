@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-6904932385464006088
+--- !u!43 &-1925247259552388509
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Env_Rubble_Stone_01 LOD1
+  m_Name: SM_Env_Rubble_Stone_01 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &7326582672807965000
+--- !u!43 &4340502469464175121
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Env_Rubble_Stone_01 LOD2
+  m_Name: SM_Env_Rubble_Stone_01 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-7541111104370481234
+--- !u!43 &-2256119124033345578
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Prop_Fountain_Water_01 LOD2
+  m_Name: SM_Prop_Fountain_01 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -152,7 +152,7 @@ Mesh:
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 1.7937119, y: 1.0875063, z: 1.7937117}
+    m_Extent: {x: 2.103956, y: 1.3512642, z: 2.1039557}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
@@ -165,13 +165,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &-1764723022903425491
+--- !u!43 &-1048059743846012900
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Prop_Fountain_01 LOD2
+  m_Name: SM_Prop_Fountain_01 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -364,13 +364,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &728730285234466603
+--- !u!43 &605416462836194719
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Prop_Fountain_01 LOD1
+  m_Name: SM_Prop_Fountain_Water_01 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -516,7 +516,7 @@ Mesh:
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 2.103956, y: 1.3512642, z: 2.1039557}
+    m_Extent: {x: 1.7937119, y: 1.0875063, z: 1.7937117}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
@@ -529,13 +529,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &5978441843912470979
+--- !u!43 &5202113594788364779
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Prop_Fountain_Water_01 LOD1
+  m_Name: SM_Prop_Fountain_Water_01 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

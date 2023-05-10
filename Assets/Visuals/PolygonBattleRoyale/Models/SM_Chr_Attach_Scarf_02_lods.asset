@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-9135491966923616484
+--- !u!43 &-7652943837848715072
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Chr_Attach_Scarf_02 LOD2
+  m_Name: SM_Chr_Attach_Scarf_02 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -165,13 +165,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &-6831498909330888166
+--- !u!43 &-2704640884924641891
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Chr_Attach_Scarf_02 LOD1
+  m_Name: SM_Chr_Attach_Scarf_02 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

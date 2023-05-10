@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-7979197047721608542
+--- !u!43 &-501391790193675973
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Rock_Wall_02 LOD1
+  m_Name: SM_Rock_Wall_02 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -186,23 +186,23 @@ MonoBehaviour:
     maxLODGenerated: 2
     initialLODMaxPolyCount: 500000
   lod0:
-  - {fileID: 2300000, guid: b65f5a848058d3944b0eefbe04d0c5bd, type: 3}
+  - {fileID: 0}
   lod1:
-  - {fileID: 1110884509551777104, guid: b65f5a848058d3944b0eefbe04d0c5bd, type: 3}
+  - {fileID: 0}
   lod2:
-  - {fileID: 8495249519714502214, guid: b65f5a848058d3944b0eefbe04d0c5bd, type: 3}
+  - {fileID: 0}
   lod3: []
   lod4: []
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &3818450901125695494
+--- !u!43 &5915971309453576920
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Rock_Wall_02 LOD2
+  m_Name: SM_Rock_Wall_02 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

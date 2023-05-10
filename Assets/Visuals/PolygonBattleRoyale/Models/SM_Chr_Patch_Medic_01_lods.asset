@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-3546132094577508349
+--- !u!43 &-3768260926842607312
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Chr_Patch_Medic_01 LOD1
+  m_Name: SM_Chr_Patch_Medic_01 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &6342203506103374764
+--- !u!43 &5007559397279533816
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Chr_Patch_Medic_01 LOD2
+  m_Name: SM_Chr_Patch_Medic_01 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

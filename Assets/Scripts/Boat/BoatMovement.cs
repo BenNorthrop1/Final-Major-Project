@@ -56,7 +56,7 @@ public class BoatMovement : MonoBehaviour
     private void FixedUpdate() 
     {
         Vector3 forwardForce = transform.forward * currentSpeed;
-        Quaternion turnRotation = Quaternion.Euler(0f, steeringWheel.currentAngle * turnSpeed, 0f);
+        Quaternion turnRotation = Quaternion.Euler(0f, 0 * turnSpeed, 0f);
 
         switch (boatState)
         {
@@ -74,8 +74,6 @@ public class BoatMovement : MonoBehaviour
             case BoatState.MovingForwards:
 
             boatRb.AddForce(forwardForce, ForceMode.Force);
-
-            boatRb.MoveRotation(boatRb.rotation * turnRotation);
 
             break;
 

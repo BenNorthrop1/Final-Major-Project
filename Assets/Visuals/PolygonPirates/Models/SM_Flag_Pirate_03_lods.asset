@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-7325438907902379967
+--- !u!43 &-8350971055261165783
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Flag_Pirate_03 LOD1
+  m_Name: SM_Flag_Pirate_03 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -165,13 +165,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &-2952716926460564070
+--- !u!43 &-5141667301114459228
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Flag_Pirate_03 LOD2
+  m_Name: SM_Flag_Pirate_03 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

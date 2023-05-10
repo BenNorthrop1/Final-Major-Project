@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-7578626698406705164
+--- !u!43 &-9048454556936680684
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Bld_Cuba_Hall_Room_03 LOD1
+  m_Name: SM_Bld_Cuba_Hall_Room_03 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &8873160439686171463
+--- !u!43 &9093824426131726189
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Bld_Cuba_Hall_Room_03 LOD2
+  m_Name: SM_Bld_Cuba_Hall_Room_03 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

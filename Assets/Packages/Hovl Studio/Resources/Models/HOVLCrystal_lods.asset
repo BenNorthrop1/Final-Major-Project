@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-7750803425121292921
+--- !u!43 &-8768795129676892943
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EGACrystal LOD2
+  m_Name: EGACrystal LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -165,13 +165,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &-7432555932916257904
+--- !u!43 &-6539620792976157308
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EGACrystal LOD1
+  m_Name: EGACrystal LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -351,11 +351,11 @@ MonoBehaviour:
     maxLODGenerated: 2
     initialLODMaxPolyCount: 500000
   lod0:
-  - {fileID: 0}
+  - {fileID: 2300000, guid: a52ee9d4e08228f4595a7343827b30fc, type: 3}
   lod1:
-  - {fileID: 0}
+  - {fileID: -3866508133838940556, guid: a52ee9d4e08228f4595a7343827b30fc, type: 3}
   lod2:
-  - {fileID: 0}
+  - {fileID: 2196509212416176748, guid: a52ee9d4e08228f4595a7343827b30fc, type: 3}
   lod3: []
   lod4: []
   lod5: []

@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-2113697485720319267
+--- !u!43 &-4858658450279218075
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Prop_Range_Wall_Door_01 LOD1
+  m_Name: SM_Prop_Range_Wall_Door_01 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &4401641315559284960
+--- !u!43 &4012129573595037963
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Prop_Range_Wall_Door_01 LOD2
+  m_Name: SM_Prop_Range_Wall_Door_01 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

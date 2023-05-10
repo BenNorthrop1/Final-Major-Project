@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-4774884523639630886
+--- !u!43 &-8630266390610260185
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Bld_Shanty_Preset_07_Collision LOD2
+  m_Name: SM_Bld_Shanty_Preset_07_Collision LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -165,13 +165,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &-4172917952881452697
+--- !u!43 &-1892574388475076379
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Bld_Shanty_Preset_07_Collision LOD1
+  m_Name: SM_Bld_Shanty_Preset_07_Collision LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

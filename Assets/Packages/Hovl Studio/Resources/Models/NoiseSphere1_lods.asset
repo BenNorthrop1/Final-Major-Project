@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-6681627892189919493
+--- !u!43 &-6470880769290244227
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,17 +186,17 @@ MonoBehaviour:
     maxLODGenerated: 2
     initialLODMaxPolyCount: 500000
   lod0:
-  - {fileID: 0}
+  - {fileID: 2300000, guid: 5092f302208764745b75b62a0560aa64, type: 3}
   lod1:
-  - {fileID: 0}
+  - {fileID: 711944263332192074, guid: 5092f302208764745b75b62a0560aa64, type: 3}
   lod2:
-  - {fileID: 0}
+  - {fileID: -926711236230639247, guid: 5092f302208764745b75b62a0560aa64, type: 3}
   lod3: []
   lod4: []
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &1906440177129447228
+--- !u!43 &1672051503127384521
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

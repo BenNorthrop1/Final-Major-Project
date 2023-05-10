@@ -31,13 +31,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &7133879269282515607
+--- !u!43 &908947487826593136
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Bld_WoodenShack_01 LOD1
+  m_Name: SM_Bld_WoodenShack_01 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &9058982248786456285
+--- !u!43 &9192593883471933080
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Bld_WoodenShack_01 LOD2
+  m_Name: SM_Bld_WoodenShack_01 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

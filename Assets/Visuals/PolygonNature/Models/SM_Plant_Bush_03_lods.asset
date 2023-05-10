@@ -31,13 +31,13 @@ MonoBehaviour:
   lod5: []
   lod6: []
   lod7: []
---- !u!43 &992208317547521286
+--- !u!43 &597067725706710457
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Plant_Bush_03 LOD2
+  m_Name: SM_Plant_Bush_03 LOD1
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -196,13 +196,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &1069479303027932828
+--- !u!43 &4683175175462143362
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SM_Plant_Bush_03 LOD1
+  m_Name: SM_Plant_Bush_03 LOD2
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
