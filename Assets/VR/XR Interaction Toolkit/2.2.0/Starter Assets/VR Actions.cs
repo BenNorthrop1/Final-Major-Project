@@ -300,6 +300,15 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Left Hand Teleport Confrimation"",
+                    ""type"": ""Button"",
+                    ""id"": ""7e2673e2-f916-47b4-b316-17508f08624f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -388,6 +397,17 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
                     ""processors"": ""ScaleVector2(x=0),StickDeadzone"",
                     ""groups"": ""Generic XR Controller"",
                     ""action"": ""Translate Anchor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b257cf46-3ce6-499c-bc2f-3ab884dae72e"",
+                    ""path"": ""<XRController>{LeftHand}/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left Hand Teleport Confrimation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -790,6 +810,15 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Right Hand Teleport Confrimation"",
+                    ""type"": ""Button"",
+                    ""id"": ""d2619c10-f996-4c2a-9607-80c08cf9507d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -878,6 +907,17 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
                     ""processors"": ""ScaleVector2(x=0),StickDeadzone"",
                     ""groups"": ""Generic XR Controller"",
                     ""action"": ""Translate Anchor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8aedc0be-26da-40a9-9318-d54f57a005c8"",
+                    ""path"": ""<XRController>{RightHand}/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right Hand Teleport Confrimation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1618,6 +1658,7 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
         m_XRILeftHandInteraction_UIPressValue = m_XRILeftHandInteraction.FindAction("UI Press Value", throwIfNotFound: true);
         m_XRILeftHandInteraction_RotateAnchor = m_XRILeftHandInteraction.FindAction("Rotate Anchor", throwIfNotFound: true);
         m_XRILeftHandInteraction_TranslateAnchor = m_XRILeftHandInteraction.FindAction("Translate Anchor", throwIfNotFound: true);
+        m_XRILeftHandInteraction_LeftHandTeleportConfrimation = m_XRILeftHandInteraction.FindAction("Left Hand Teleport Confrimation", throwIfNotFound: true);
         // XRI LeftHand Locomotion
         m_XRILeftHandLocomotion = asset.FindActionMap("XRI LeftHand Locomotion", throwIfNotFound: true);
         m_XRILeftHandLocomotion_TeleportSelect = m_XRILeftHandLocomotion.FindAction("Teleport Select", throwIfNotFound: true);
@@ -1644,6 +1685,7 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
         m_XRIRightHandInteraction_UIPressValue = m_XRIRightHandInteraction.FindAction("UI Press Value", throwIfNotFound: true);
         m_XRIRightHandInteraction_RotateAnchor = m_XRIRightHandInteraction.FindAction("Rotate Anchor", throwIfNotFound: true);
         m_XRIRightHandInteraction_TranslateAnchor = m_XRIRightHandInteraction.FindAction("Translate Anchor", throwIfNotFound: true);
+        m_XRIRightHandInteraction_RightHandTeleportConfrimation = m_XRIRightHandInteraction.FindAction("Right Hand Teleport Confrimation", throwIfNotFound: true);
         // XRI RightHand Locomotion
         m_XRIRightHandLocomotion = asset.FindActionMap("XRI RightHand Locomotion", throwIfNotFound: true);
         m_XRIRightHandLocomotion_TeleportSelect = m_XRIRightHandLocomotion.FindAction("Teleport Select", throwIfNotFound: true);
@@ -1858,6 +1900,7 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_XRILeftHandInteraction_UIPressValue;
     private readonly InputAction m_XRILeftHandInteraction_RotateAnchor;
     private readonly InputAction m_XRILeftHandInteraction_TranslateAnchor;
+    private readonly InputAction m_XRILeftHandInteraction_LeftHandTeleportConfrimation;
     public struct XRILeftHandInteractionActions
     {
         private @VRActions m_Wrapper;
@@ -1870,6 +1913,7 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
         public InputAction @UIPressValue => m_Wrapper.m_XRILeftHandInteraction_UIPressValue;
         public InputAction @RotateAnchor => m_Wrapper.m_XRILeftHandInteraction_RotateAnchor;
         public InputAction @TranslateAnchor => m_Wrapper.m_XRILeftHandInteraction_TranslateAnchor;
+        public InputAction @LeftHandTeleportConfrimation => m_Wrapper.m_XRILeftHandInteraction_LeftHandTeleportConfrimation;
         public InputActionMap Get() { return m_Wrapper.m_XRILeftHandInteraction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1903,6 +1947,9 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
             @TranslateAnchor.started += instance.OnTranslateAnchor;
             @TranslateAnchor.performed += instance.OnTranslateAnchor;
             @TranslateAnchor.canceled += instance.OnTranslateAnchor;
+            @LeftHandTeleportConfrimation.started += instance.OnLeftHandTeleportConfrimation;
+            @LeftHandTeleportConfrimation.performed += instance.OnLeftHandTeleportConfrimation;
+            @LeftHandTeleportConfrimation.canceled += instance.OnLeftHandTeleportConfrimation;
         }
 
         private void UnregisterCallbacks(IXRILeftHandInteractionActions instance)
@@ -1931,6 +1978,9 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
             @TranslateAnchor.started -= instance.OnTranslateAnchor;
             @TranslateAnchor.performed -= instance.OnTranslateAnchor;
             @TranslateAnchor.canceled -= instance.OnTranslateAnchor;
+            @LeftHandTeleportConfrimation.started -= instance.OnLeftHandTeleportConfrimation;
+            @LeftHandTeleportConfrimation.performed -= instance.OnLeftHandTeleportConfrimation;
+            @LeftHandTeleportConfrimation.canceled -= instance.OnLeftHandTeleportConfrimation;
         }
 
         public void RemoveCallbacks(IXRILeftHandInteractionActions instance)
@@ -2132,6 +2182,7 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_XRIRightHandInteraction_UIPressValue;
     private readonly InputAction m_XRIRightHandInteraction_RotateAnchor;
     private readonly InputAction m_XRIRightHandInteraction_TranslateAnchor;
+    private readonly InputAction m_XRIRightHandInteraction_RightHandTeleportConfrimation;
     public struct XRIRightHandInteractionActions
     {
         private @VRActions m_Wrapper;
@@ -2144,6 +2195,7 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
         public InputAction @UIPressValue => m_Wrapper.m_XRIRightHandInteraction_UIPressValue;
         public InputAction @RotateAnchor => m_Wrapper.m_XRIRightHandInteraction_RotateAnchor;
         public InputAction @TranslateAnchor => m_Wrapper.m_XRIRightHandInteraction_TranslateAnchor;
+        public InputAction @RightHandTeleportConfrimation => m_Wrapper.m_XRIRightHandInteraction_RightHandTeleportConfrimation;
         public InputActionMap Get() { return m_Wrapper.m_XRIRightHandInteraction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -2177,6 +2229,9 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
             @TranslateAnchor.started += instance.OnTranslateAnchor;
             @TranslateAnchor.performed += instance.OnTranslateAnchor;
             @TranslateAnchor.canceled += instance.OnTranslateAnchor;
+            @RightHandTeleportConfrimation.started += instance.OnRightHandTeleportConfrimation;
+            @RightHandTeleportConfrimation.performed += instance.OnRightHandTeleportConfrimation;
+            @RightHandTeleportConfrimation.canceled += instance.OnRightHandTeleportConfrimation;
         }
 
         private void UnregisterCallbacks(IXRIRightHandInteractionActions instance)
@@ -2205,6 +2260,9 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
             @TranslateAnchor.started -= instance.OnTranslateAnchor;
             @TranslateAnchor.performed -= instance.OnTranslateAnchor;
             @TranslateAnchor.canceled -= instance.OnTranslateAnchor;
+            @RightHandTeleportConfrimation.started -= instance.OnRightHandTeleportConfrimation;
+            @RightHandTeleportConfrimation.performed -= instance.OnRightHandTeleportConfrimation;
+            @RightHandTeleportConfrimation.canceled -= instance.OnRightHandTeleportConfrimation;
         }
 
         public void RemoveCallbacks(IXRIRightHandInteractionActions instance)
@@ -2483,6 +2541,7 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
         void OnUIPressValue(InputAction.CallbackContext context);
         void OnRotateAnchor(InputAction.CallbackContext context);
         void OnTranslateAnchor(InputAction.CallbackContext context);
+        void OnLeftHandTeleportConfrimation(InputAction.CallbackContext context);
     }
     public interface IXRILeftHandLocomotionActions
     {
@@ -2512,6 +2571,7 @@ public partial class @VRActions: IInputActionCollection2, IDisposable
         void OnUIPressValue(InputAction.CallbackContext context);
         void OnRotateAnchor(InputAction.CallbackContext context);
         void OnTranslateAnchor(InputAction.CallbackContext context);
+        void OnRightHandTeleportConfrimation(InputAction.CallbackContext context);
     }
     public interface IXRIRightHandLocomotionActions
     {

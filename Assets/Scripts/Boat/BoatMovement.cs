@@ -40,23 +40,21 @@ public class BoatMovement : MonoBehaviour
     private void Update() 
     {
         water.transform.position =  new Vector3(transform.position.x, 0, transform.position.z);
+
+        if(!effectedByWind)
+        {
+            currentSpeed += passiveSpeed * Time.deltaTime;
+        }
+        else
+        {
+            currentSpeed += windSpeed * Time.deltaTime;         
+        }
+
+        currentSpeed = Mathf.Clamp(currentSpeed, 0f, maxSpeed);
     }
 
     private void FixedUpdate() 
     {
-        if(!effectedByWind)
-        {
-            currentSpeed += passiveSpeed * Time.deltaTime;
-            Debug.Log("Regular Speed");
-        }
-        else
-        {
-            currentSpeed += windSpeed * Time.deltaTime;
-            Debug.Log("Wind Speed");            
-        }
-
-        currentSpeed = Mathf.Clamp(currentSpeed, 0f, maxSpeed);
-
         Vector3 forwardForce = transform.forward * currentSpeed;
         Quaternion turnRotation = Quaternion.Euler(0f, steeringWheel.currentAngle * turnSpeed, 0f);
 
