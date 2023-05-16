@@ -802,7 +802,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: TERRAINPACKAGE_EXIST;HDRPPACKAGE_EXIST;ENABLE_UNITYMESHSIMPLIFIER
+    Standalone: TERRAINPACKAGE_EXIST;HDRPPACKAGE_EXIST
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
