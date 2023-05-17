@@ -9,22 +9,17 @@ public class BoatMovement : MonoBehaviour
 {
     public bool effectedByWind;
 
-    [Header("Wheel Components")]
+    [Header("Wheel Component")]
     public HingeJoint steeringWheel;
-    public Transform steeringWheelPos;
-    public Transform steeringWheelPivot;
+
 
     [Header("Speed Values")]
-    public float passiveSpeed;
-    public float windSpeed;
-    public float maxSpeed;
+    public float regularSpeed;
     public float turnSpeed;
     public float maxTurnAngle = 180;
 
     private Rigidbody boatRb;
     private WaterSurface water;
-
-    private float currentSpeed;
 
     private void Awake() 
     {
@@ -34,16 +29,17 @@ public class BoatMovement : MonoBehaviour
 
     private void Update() 
     {
-        //This handles updating the steering Wheel Transform as the hinge joint connected body causes issues with positions
-
+        //This updates the Oceans position dynamically
         water.transform.position =  new Vector3(transform.position.x, 0, transform.position.z);
-        steeringWheel.transform.position = steeringWheelPos.transform.position;
-        steeringWheel.connectedAnchor = steeringWheelPivot.position;
     }
 
     private void FixedUpdate() 
     {
+        float turnAngle = Mathf.Clamp(steeringWheel.angle/ maxTurnAngle, -1 , 1);
 
+        transform.rotation = Quaternion.Euler(0, turnAngle, 0);
+
+        boatRb.AddForce(Vector3.forward * regularSpeed, ForceMode.Acceleration);
     }
 }
 
