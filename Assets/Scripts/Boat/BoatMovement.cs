@@ -35,9 +35,9 @@ public class BoatMovement : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        float turnAngle = Mathf.Clamp(steeringWheel.angle/ maxTurnAngle, -1 , 1);
+        //float turnAngle = Mathf.Clamp(steeringWheel.angle/ maxTurnAngle, -1 , 1);
 
-        transform.rotation = Quaternion.Euler(0, turnAngle, 0);
+        //transform.rotation = Quaternion.Euler(0, turnAngle, 0);
 
         boatRb.AddForce(Vector3.forward * regularSpeed, ForceMode.Acceleration);
     }

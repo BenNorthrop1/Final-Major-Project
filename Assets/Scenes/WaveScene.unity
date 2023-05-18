@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 111.66222, g: 177.12746, b: 500.56842, a: 1}
+  m_IndirectSpecularColor: {r: 111.64977, g: 159.78639, b: 332.16556, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1632,7 +1632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &224814986
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2290,7 +2290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &270922957
 Transform:
   m_ObjectHideFlags: 0
@@ -2675,12 +2675,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c9eb171cd63b5540be61eb05a91c99d, type: 3}
---- !u!23 &301910033 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 2c9eb171cd63b5540be61eb05a91c99d,
-    type: 3}
-  m_PrefabInstance: {fileID: 301910032}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &313069311
 GameObject:
   m_ObjectHideFlags: 0
@@ -4643,6 +4637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Cannon_01_Separate
       objectReference: {fileID: 0}
+    - target: {fileID: 192162, guid: af9532c2204bd1746abe9a86f5ec97b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 430300, guid: af9532c2204bd1746abe9a86f5ec97b2, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5216,17 +5214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f582a16ceb3c9742a2ebce863ca04a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirty: 0
-  bounds:
-    m_Center: {x: 3.4188538, y: 444.45453, z: -0.82699585}
-    m_Extent: {x: 500.0483, y: 500.0483, z: 500.0483}
-  hlodRoot: {fileID: 1800254231}
-  renderers:
-  - {fileID: 2129094184}
-  - {fileID: 971167199}
-  - {fileID: 301910033}
-  - {fileID: 677506320}
-  childVolumes: []
 --- !u!4 &581941765
 Transform:
   m_ObjectHideFlags: 0
@@ -6127,12 +6114,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c9eb171cd63b5540be61eb05a91c99d, type: 3}
---- !u!23 &677506320 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 2c9eb171cd63b5540be61eb05a91c99d,
-    type: 3}
-  m_PrefabInstance: {fileID: 677506319}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &687023701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6748,19 +6729,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720143620}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c44c9710c3f0c24493ecf94684d54bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   effectedByWind: 0
-  water: {fileID: 0}
   steeringWheel: {fileID: 1543729155}
-  steeringWheelPos: {fileID: 2018540071}
-  steeringWheelPivot: {fileID: 270922957}
-  passiveSpeed: 5
-  windSpeed: 30
-  maxSpeed: 30
+  regularSpeed: 0
   turnSpeed: 0.1
   maxTurnAngle: 180
 --- !u!54 &720143622
@@ -8818,12 +8794,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c9eb171cd63b5540be61eb05a91c99d, type: 3}
---- !u!23 &971167199 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 2c9eb171cd63b5540be61eb05a91c99d,
-    type: 3}
-  m_PrefabInstance: {fileID: 971167198}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &979259144
 GameObject:
   m_ObjectHideFlags: 0
@@ -9585,7 +9555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e013dbac334e34baf25042d16a61aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 462384342}
 --- !u!114 &1069736998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16871,7 +16840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e013dbac334e34baf25042d16a61aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 313069312}
 --- !u!114 &1961960472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19480,12 +19448,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1117026674}
   m_SourcePrefab: {fileID: 100100000, guid: 2c9eb171cd63b5540be61eb05a91c99d, type: 3}
---- !u!23 &2129094184 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 2c9eb171cd63b5540be61eb05a91c99d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2129094183}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2131586036
 GameObject:
   m_ObjectHideFlags: 0
