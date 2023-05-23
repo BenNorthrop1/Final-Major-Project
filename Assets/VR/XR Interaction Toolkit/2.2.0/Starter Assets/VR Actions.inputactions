@@ -280,7 +280,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Left Hand Teleport Confrimation",
+                    "name": "Menu Button",
                     "type": "Button",
                     "id": "7e2673e2-f916-47b4-b316-17508f08624f",
                     "expectedControlType": "Button",
@@ -385,7 +385,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Left Hand Teleport Confrimation",
+                    "action": "Menu Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -790,7 +790,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Right Hand Teleport Confrimation",
+                    "name": "Recenter Button",
                     "type": "Button",
                     "id": "d2619c10-f996-4c2a-9607-80c08cf9507d",
                     "expectedControlType": "Button",
@@ -895,7 +895,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Right Hand Teleport Confrimation",
+                    "action": "Recenter Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -955,7 +955,7 @@
                     "type": "PassThrough",
                     "id": "00a4dc9f-1ee6-4349-b0e9-72d5dccaadd6",
                     "expectedControlType": "Analog",
-                    "processors": "AxisDeadzone",
+                    "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
@@ -981,6 +981,24 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "ab662867-9b19-4bc9-9d05-11a6d590e9f9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ForwardsButton",
+                    "type": "Button",
+                    "id": "a713c85c-06a4-4e34-a945-e396a6a7e64a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BackwardsButton",
+                    "type": "Button",
+                    "id": "2f89c658-fe32-4649-a5b5-ae36aa055dcd",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -1084,6 +1102,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "093e861f-a34e-4bef-9225-406a5759a47c",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ForwardsButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5804943f-7c31-464c-8644-d1671efafdd0",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BackwardsButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

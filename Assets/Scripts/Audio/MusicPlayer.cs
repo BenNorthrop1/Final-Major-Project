@@ -6,23 +6,7 @@ using UnityEngine.Audio;
 public class MusicPlayer : MonoBehaviour
 {
     public AudioClip[] clips;
-    private AudioSource audioSource;
-
-    public static MusicPlayer instance;
-    
-    private void Awake() 
-    {
-        if(instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(gameObject);
-    }
+    public AudioSource audioSource;
 
     private void Start() 
     {

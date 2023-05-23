@@ -5,17 +5,31 @@ using UnityEngine.InputSystem;
 
 public class HandAnimationController : MonoBehaviour
 {
-    public InputActionProperty pinchAnimationAction;
-    public InputActionProperty gripAnimationAction;
+    [Header("Input References")]
+    [SerializeField] private InputActionProperty pinchAnimationAction;
 
-    public Animator animator;
+    //This just makes a gap between the values in the Editor.
+    [Space(10)]
 
-    void Update()
+    [SerializeField] private InputActionProperty gripAnimationAction;
+
+    private Animator handAnimator;
+
+    private void Awake() 
     {
-        float triggerValue = pinchAnimationAction.action.ReadValue<float>();
-        animator.SetFloat("Trigger", triggerValue);
+        handAnimator = GetComponent<Animator>();
+    }
 
+    private void Update()
+    {   
+        //Reads the input on the trigger into a float.
+        float triggerValue = pinchAnimationAction.action.ReadValue<float>();
+        //Uses the trigger value to control the hands blend tree.
+        handAnimator.SetFloat("Trigger", triggerValue);
+
+        //Reads the input on the grip into a float.
         float gripValue = gripAnimationAction.action.ReadValue<float>();
-        animator.SetFloat("Grip", gripValue);
+        //Uses the grip value to control the hands blend tree.
+        handAnimator.SetFloat("Grip", gripValue);
     }
 }

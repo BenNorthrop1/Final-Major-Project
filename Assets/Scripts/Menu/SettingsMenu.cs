@@ -15,48 +15,62 @@ public class SettingsMenu : MonoBehaviour
 
     private void Awake() 
     {
-        float MasterVolume = PlayerPrefs.GetFloat("MasterVolume");
+        float MasterVolume = PlayerPrefs.GetFloat("MasterVolume", 1);
         MasterVolumeSlider.value = MasterVolume;
 
-        float MusicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        float MusicVolume = PlayerPrefs.GetFloat("MusicVolume", 1);
         MusicVolumeSlider.value = MusicVolume;
 
-        float OceanVolume = PlayerPrefs.GetFloat("OceanVolume");
+        float OceanVolume = PlayerPrefs.GetFloat("OceanVolume", 1);
         OceanVolumeSlider.value = OceanVolume;
         
-        float MiscVolume = PlayerPrefs.GetFloat("MiscVolume");
+        float MiscVolume = PlayerPrefs.GetFloat("MiscVolume", 1);
         MiscVolumeSlider.value = MiscVolume;
 
     }
 
-    public void SetMasterVolume()
+    public void SetMasterVolume(float sliderValue)
     {
-        float MasterVolume = MasterVolumeSlider.value;
-        audioMixer.SetFloat("MasterVolume", MasterVolume);
-        PlayerPrefs.SetFloat("MasterVolume", MasterVolume);
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("MasterVolume", sliderValue);
     }
 
-    public void SetMusicVolume()
+    public void SetMusicVolume(float sliderValue)
     {
-        float MusicVolume = MusicVolumeSlider.value;
-        audioMixer.SetFloat("MusicVolume", MusicVolume);
-        PlayerPrefs.SetFloat("MusicVolume", MusicVolume);
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("MusicVolume", sliderValue);
     }
 
-    public void SetOceanVolume()
+    public void SetOceanVolume(float sliderValue)
     {
-        float OceanVolume = OceanVolumeSlider.value;
-        audioMixer.SetFloat("OceanVolume", OceanVolume);
-        PlayerPrefs.SetFloat("OceanVolume", OceanVolume);
+        audioMixer.SetFloat("OceanVolume", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("OceanVolume", sliderValue);
     }
 
-    public void SetMiscVolume()
+    public void SetMiscVolume(float sliderValue)
     {
-        float MiscVolume = MiscVolumeSlider.value;
-        audioMixer.SetFloat("MiscVolume", MiscVolume);
-        PlayerPrefs.SetFloat("MiscVolume", MiscVolume);
+        audioMixer.SetFloat("MiscVolume", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("MiscVolume", sliderValue);
     }
 
+    public void ResetAllVolume()
+    {
+        PlayerPrefs.DeleteKey("MasterVolume");
+        PlayerPrefs.DeleteKey("MusicVolume");
+        PlayerPrefs.DeleteKey("OceanVolume");
+        PlayerPrefs.DeleteKey("MiscVolume");
 
+        float MasterVolume = PlayerPrefs.GetFloat("MasterVolume", 1);
+        MasterVolumeSlider.value = MasterVolume;
+
+        float MusicVolume = PlayerPrefs.GetFloat("MusicVolume", 1);
+        MusicVolumeSlider.value = MusicVolume;
+
+        float OceanVolume = PlayerPrefs.GetFloat("OceanVolume", 1);
+        OceanVolumeSlider.value = OceanVolume;
+        
+        float MiscVolume = PlayerPrefs.GetFloat("MiscVolume", 1);
+        MiscVolumeSlider.value = MiscVolume;
+    }
 
 }

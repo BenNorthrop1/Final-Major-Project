@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Rock
+  - Boat
   layers:
   - Default
   - TransparentFX
@@ -15,6 +17,7 @@ TagManager:
   - Interactable
   - Respawn
   - Boat
+  - Rocks
   - 
   - 
   - 
@@ -35,7 +38,6 @@ TagManager:
   - 
   - 
   - 
-  - HLOD
   - Teleport
   m_SortingLayers:
   - name: Default
