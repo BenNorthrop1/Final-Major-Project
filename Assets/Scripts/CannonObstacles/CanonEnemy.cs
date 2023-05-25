@@ -8,6 +8,7 @@ public class CanonEnemy : MonoBehaviour
     [Header("Detection Values")]
     [SerializeField] private float detectionRadius;
 
+
     [Header("Detection Layers")]
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private LayerMask ignoreLayers;
@@ -19,7 +20,8 @@ public class CanonEnemy : MonoBehaviour
 
     [Header("Cannon Values")]
     [SerializeField] private float cannonSpeed;
-
+    [SerializeField] private float cannonCooldown;
+    
     [Header("Cannon Effects")]
     [SerializeField] private ParticleSystem cannonSmoke;
 
@@ -65,7 +67,7 @@ public class CanonEnemy : MonoBehaviour
 
                 if(canShoot == true)
                 {
-                    Invoke("ShootCannon", 5);
+                    Invoke("ShootCannon", cannonCooldown);
                     canShoot = false;
                 }
             }

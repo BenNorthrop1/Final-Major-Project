@@ -79,10 +79,11 @@ public class BoatMovement : MonoBehaviour
         //This stores the rotation in which the object is pointing.
         Quaternion yaw = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         //This multiplies the yaw by the input, which returns the direction in which we move.
-        Vector3 direction = yaw * new Vector3(0, 0, moveDirection.y);
+        //Vector3 direction = yaw * new Vector3(0, 0, moveDirection.y);
+        Vector3 direction = yaw * new Vector3(0, 0, 5);
         
         //This moves the Rigidbody towards a position in this case the direction we defined previously every frame multiplied by a value I can configure.
-        boatRigidbody.MovePosition(boatRigidbody.position + direction * Time.fixedDeltaTime * moveSpeed);
+        boatRigidbody.AddForce(boatRigidbody.position + direction * Time.fixedDeltaTime * moveSpeed);
 
         #endregion
         
@@ -91,13 +92,14 @@ public class BoatMovement : MonoBehaviour
         //This defines the axis we rotate on.
         Vector3 axis = Vector3.up;
         //This returns an angle which rotates along the Y axis using the value above multiplied by Every physics frame and user input.
-        float angle = turnSpeed * Time.fixedDeltaTime * turnDirection;
+        //float angle = turnSpeed * Time.fixedDeltaTime * turnDirection;
+        float angle = turnSpeed * Time.fixedDeltaTime * 5;
 
         //This stores a rotation which uses the previously acquired axis and angle to find the turn position and rotation.
         Quaternion rotateAmount = Quaternion.AngleAxis(angle, axis);
 
         //This rotates the rigidbody by the rotation amount.
-        boatRigidbody.MoveRotation(boatRigidbody.rotation * rotateAmount);
+        boatRigidbody.AddTorque(Vector3.right * angle);
 
         #endregion
     }
