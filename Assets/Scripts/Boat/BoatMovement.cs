@@ -68,38 +68,38 @@ public class BoatMovement : MonoBehaviour
         #endregion
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
-        //I'm using Fixed Update for the Rigidbody as it returns a better result and is recommended by Unity.
-        //Fixed update runs per Physics tick which is less frequent then update.
-
-
         #region BoatMovement
 
-        //This stores the rotation in which the object is pointing.
+        // This stores the rotation in which the object is pointing.
         Quaternion yaw = Quaternion.Euler(0, transform.eulerAngles.y, 0);
-        //This multiplies the yaw by the input, which returns the direction in which we move.
-        //Vector3 direction = yaw * new Vector3(0, 0, moveDirection.y);
-        Vector3 direction = yaw * new Vector3(0, 0, 5);
-        
-        //This moves the Rigidbody towards a position in this case the direction we defined previously every frame multiplied by a value I can configure.
-        boatRigidbody.AddForce(boatRigidbody.position + direction * Time.fixedDeltaTime * moveSpeed);
+        // This multiplies the yaw by the input, which returns the direction in which we move.
+        Vector3 direction = yaw * new Vector3(0, 0, moveDirection.y);
+
+        // Normalize the direction vector to ensure consistent speed regardless of the magnitude
+        direction.Normalize();
+
+        // Calculate the force to apply based on the direction and move speed
+        Vector3 force = direction * moveSpeed;
+
+        // Apply the force to the rigidbody
+        boatRigidbody.AddForce(force, ForceMode.Acceleration);
 
         #endregion
-        
+
         #region BoatRotation
 
-        //This defines the axis we rotate on.
+        // This defines the axis we rotate on.
         Vector3 axis = Vector3.up;
-        //This returns an angle which rotates along the Y axis using the value above multiplied by Every physics frame and user input.
-        //float angle = turnSpeed * Time.fixedDeltaTime * turnDirection;
-        float angle = turnSpeed * Time.fixedDeltaTime * 5;
+        // This returns an angle which rotates along the Y axis using the value above multiplied by every physics frame and user input.
+        float angle = turnSpeed * Time.fixedDeltaTime * turnDirection;
 
-        //This stores a rotation which uses the previously acquired axis and angle to find the turn position and rotation.
-        Quaternion rotateAmount = Quaternion.AngleAxis(angle, axis);
+        // Calculate the torque to apply based on the axis and turn speed
+        Vector3 torque = axis * angle;
 
-        //This rotates the rigidbody by the rotation amount.
-        boatRigidbody.AddTorque(Vector3.right * angle);
+        // Apply the torque to the rigidbody
+        boatRigidbody.AddTorque(torque, ForceMode.Acceleration);
 
         #endregion
     }

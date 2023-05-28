@@ -8,12 +8,16 @@ public class CanonEnemy : MonoBehaviour
     [Header("Detection Values")]
     [SerializeField] private float detectionRadius;
 
+    [Header("Death Values")]
+    [SerializeField] private float deathRadius;
+
 
     [Header("Detection Layers")]
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private LayerMask ignoreLayers;
 
     [Header("Cannon References")]
+    [SerializeField] private GameObject cannonObject;
     [SerializeField] private Transform cannonShaft;
     [SerializeField] private Transform startPos;
     [SerializeField] private GameObject cannonBallPrefab;
@@ -45,6 +49,11 @@ public class CanonEnemy : MonoBehaviour
         if(Physics.CheckSphere(transform.position, detectionRadius, playerLayer))
         {
             print("Player Is In Radius");
+
+            if(Physics.CheckSphere(transform.position, deathRadius, playerLayer))
+            {
+                Destroy(cannonObject);
+            }
 
             //This searches the scene for the ships transform and puts it into a value.
             shipTransform = FindObjectOfType<BoatMovement>().transform;
@@ -90,5 +99,7 @@ public class CanonEnemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, deathRadius);
     }
 }

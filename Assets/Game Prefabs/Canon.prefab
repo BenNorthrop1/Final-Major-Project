@@ -10109,18 +10109,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRadius: 150
+  deathRadius: 15
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
   ignoreLayers:
     serializedVersion: 2
     m_Bits: 1024
+  cannonObject: {fileID: 6869186704307750174}
   cannonShaft: {fileID: 6538741228151892685}
   startPos: {fileID: 2893056289976491399}
   cannonBallPrefab: {fileID: 1956665455148245741, guid: c3791b71e1dbd0849b99d6a873953928,
     type: 3}
   cannonSpeed: 125
-  cannonCooldown: 10
+  cannonCooldown: 5
   cannonSmoke: {fileID: 2139267492290071764}
   shipBodyHeight: 5
   cannonSounds:
@@ -10267,6 +10269,10 @@ PrefabInstance:
     - target: {fileID: 199096, guid: ad143900d84ce844993be56d509c6857, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Crane_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 199096, guid: ad143900d84ce844993be56d509c6857, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 405670, guid: ad143900d84ce844993be56d509c6857, type: 3}
       propertyPath: m_RootOrder
