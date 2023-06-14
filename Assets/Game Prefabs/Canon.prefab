@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2139267492270589896}
   - component: {fileID: 2139267492290071764}
   - component: {fileID: 2139267492288370268}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FX_Cannon_Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4775,7 +4775,7 @@ GameObject:
   - component: {fileID: 2139267492270702304}
   - component: {fileID: 2139267492290069736}
   - component: {fileID: 2139267492288274478}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FX_Cannon_Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9554,6 +9554,111 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &3340806764705129884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6339156375772800712}
+  - component: {fileID: 8679151651522249894}
+  - component: {fileID: 8859976021950938575}
+  - component: {fileID: 2202261210705901607}
+  m_Layer: 12
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6339156375772800712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340806764705129884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 800, z: 0}
+  m_LocalScale: {x: 25, y: 25, z: 25}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4065956993037797846}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8679151651522249894
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340806764705129884}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8859976021950938575
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340806764705129884}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 208a87778b60a0048ad7abeb83a2ff9d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &2202261210705901607
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340806764705129884}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3894932964114906267
 GameObject:
   m_ObjectHideFlags: 0
@@ -9566,7 +9671,7 @@ GameObject:
   - component: {fileID: 3894932964117890599}
   - component: {fileID: 3894932964116857995}
   - component: {fileID: 3957402878721018841}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Env_Rock_Large_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9657,7 +9762,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d1bf9afec41e2b3488bfa7af8b1d1e38, type: 3}
 --- !u!1 &4000311563009939107
@@ -9669,7 +9774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 64556772692178079}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TargetPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9701,9 +9806,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4065956993037797846}
-  m_Layer: 0
+  - component: {fileID: 5197882108261931135}
+  - component: {fileID: 6652601051391660214}
+  m_Layer: 11
   m_Name: Canon
-  m_TagString: Untagged
+  m_TagString: Cannons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9723,9 +9830,51 @@ Transform:
   - {fileID: 3894932964114454663}
   - {fileID: 8100828958716637985}
   - {fileID: 468572215195187557}
+  - {fileID: 6339156375772800712}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5197882108261931135
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869186704307750174}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7, y: 17.09964, z: 7}
+  m_Center: {x: 0, y: 8.86982, z: 0}
+--- !u!114 &6652601051391660214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869186704307750174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d6e81f9afdb8e419d0e13e61b2db76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 75
+  deathMoney: 25
+  deathRadius: 25
+  deathSphereHeight: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  currentHealth: 0
 --- !u!1 &6986960745310954781
 GameObject:
   m_ObjectHideFlags: 0
@@ -9735,7 +9884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538741228151892685}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BarrelPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9769,7 +9918,7 @@ GameObject:
   - component: {fileID: 8100828958716635921}
   - component: {fileID: 8100828958720061715}
   - component: {fileID: 8100828958719069115}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Prop_Cannon_01_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9853,7 +10002,7 @@ GameObject:
   - component: {fileID: 8100828958716641701}
   - component: {fileID: 8100828958720107697}
   - component: {fileID: 8100828958719050981}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Prop_Cannon_01_Wheel_Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9936,7 +10085,7 @@ GameObject:
   - component: {fileID: 8100828958716666293}
   - component: {fileID: 8100828958720022911}
   - component: {fileID: 8100828958719023695}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Prop_Cannon_01_Wheel_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10021,7 +10170,7 @@ GameObject:
   - component: {fileID: 8100828958718832665}
   - component: {fileID: 6823418797372760062}
   - component: {fileID: 9766727680266982}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Prop_Cannon_01_Separate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10108,8 +10257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d80809da9976e745b8a5853b2a0fc8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 150
-  deathRadius: 15
+  detectionRadius: 100
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -10122,7 +10270,7 @@ MonoBehaviour:
   cannonBallPrefab: {fileID: 1956665455148245741, guid: c3791b71e1dbd0849b99d6a873953928,
     type: 3}
   cannonSpeed: 125
-  cannonCooldown: 5
+  cannonCooldown: 2
   cannonSmoke: {fileID: 2139267492290071764}
   shipBodyHeight: 5
   cannonSounds:
@@ -10235,7 +10383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2893056289976491399}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: StartPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10269,6 +10417,10 @@ PrefabInstance:
     - target: {fileID: 199096, guid: ad143900d84ce844993be56d509c6857, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Crane_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 199096, guid: ad143900d84ce844993be56d509c6857, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 199096, guid: ad143900d84ce844993be56d509c6857, type: 3}
       propertyPath: m_IsActive
@@ -10428,6 +10580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TargetModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b13d43d80fcf344db9b8d1ea66fceda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

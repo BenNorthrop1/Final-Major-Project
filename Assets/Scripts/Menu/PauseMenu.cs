@@ -10,7 +10,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private InputActionProperty pauseButton;
 
     [Header("UI elements")]
-    [SerializeField] private GameObject PauseMenuObject;
+    [SerializeField] private GameObject pauseMenuObject;
+    [SerializeField] private GameObject optionsMenuObject;
+    [SerializeField] private GameObject shopMenuObject;
 
     [Header("Ray Interactors")]
     [SerializeField] private GameObject rightHandRayInteractor;
@@ -18,37 +20,51 @@ public class PauseMenu : MonoBehaviour
 
     private void Start() 
     {
-        PauseMenuObject.SetActive(false);
+        pauseMenuObject.SetActive(false);
         rightHandRayInteractor.SetActive(false);
         leftHandRayInteractor.SetActive(false);
+        optionsMenuObject.SetActive(false);
+        shopMenuObject.SetActive(true);
     }
 
     private void Update() 
     {
         if(pauseButton.action.WasPressedThisFrame())
         {
-            if(PauseMenuObject.activeSelf == false)
+            if(pauseMenuObject.activeSelf == false)
             {
-                PauseMenuObject.SetActive(true);
+                pauseMenuObject.SetActive(true);
                 rightHandRayInteractor.SetActive(true);
                 leftHandRayInteractor.SetActive(true);
             }
             else
             {
-                PauseMenuObject.SetActive(false);
-                rightHandRayInteractor.SetActive(true);
-                leftHandRayInteractor.SetActive(true);
+                pauseMenuObject.SetActive(false);
+                rightHandRayInteractor.SetActive(false);
+                leftHandRayInteractor.SetActive(false);
             }
         }
     }
 
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MenuLevel");
     }
 
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Options()
+    {
+        optionsMenuObject.SetActive(true);
+        shopMenuObject.SetActive(false);
+    }
+
+    public void Shops()
+    {
+        optionsMenuObject.SetActive(false);
+        shopMenuObject.SetActive(true);
     }
 }

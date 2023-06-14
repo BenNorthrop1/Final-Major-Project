@@ -48,7 +48,7 @@ public class BoatMovement : MonoBehaviour
         //This updates the input every frame.
         //I put the Input in the Update as its more consistently updating every frame rather then multiple.
         moveDirection = moveInput.action.ReadValue<Vector2>();
-        turnDirection = turnInput.action.ReadValue<Vector2>().x;
+        turnDirection = moveInput.action.ReadValue<Vector2>().x;
 
         #region WheelAnimation
 

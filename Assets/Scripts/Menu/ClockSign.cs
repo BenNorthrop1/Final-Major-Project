@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class ClockSign : MonoBehaviour
 {
@@ -30,18 +31,7 @@ public class ClockSign : MonoBehaviour
         int minutes = Mathf.FloorToInt(currentTime / 60) % 60;
         int hours = Mathf.FloorToInt(currentTime / 3600);
 
-        if (hours > 0)
-        {
-            timeText.SetText($"{hours} Hrs {minutes} Mins {seconds} Secs");
-        }
-        else if (minutes > 0)
-        {
-            timeText.SetText($"{minutes} Mins {seconds} Secs");
-        }
-        else
-        {
-            timeText.SetText($"{seconds} Secs");
-        }
+        timeText.SetText(string.Format("{0:0}:{1:00}:{2:00}", hours, minutes, seconds));
 
         #endregion
 
@@ -53,18 +43,7 @@ public class ClockSign : MonoBehaviour
         int bestTimeMinutes = Mathf.FloorToInt(bestTime / 60) % 60;
         int bestTimeHours = Mathf.FloorToInt(bestTime / 3600);
 
-        if (bestTimeHours > 0)
-        {
-            bestTimeText.SetText($"{bestTimeHours} Hrs {bestTimeMinutes} Mins {bestTimeSeconds} Secs");
-        }
-        else if (bestTimeMinutes > 0)
-        {
-            bestTimeText.SetText($"{bestTimeMinutes} Mins {bestTimeSeconds} Secs");
-        }
-        else
-        {
-            bestTimeText.SetText($"{bestTimeSeconds} Secs");
-        }
+        bestTimeText.SetText(string.Format("{0:0}:{1:00}:{2:00}", bestTimeHours, bestTimeMinutes, bestTimeSeconds));
 
         #endregion
 

@@ -33,18 +33,7 @@ public class MainMenu : MonoBehaviour
         int bestTimeMinutes = Mathf.FloorToInt(bestTime / 60) % 60;
         int bestTimeHours = Mathf.FloorToInt(bestTime / 3600);
 
-        if (bestTimeHours > 0)
-        {
-            bestScoreText.SetText($"{bestTimeHours} Hrs {bestTimeMinutes} Mins {bestTimeSeconds} Secs");
-        }
-        else if (bestTimeMinutes > 0)
-        {
-            bestScoreText.SetText($"{bestTimeMinutes} Mins {bestTimeSeconds} Secs");
-        }
-        else
-        {
-            bestScoreText.SetText($"{bestTimeSeconds} Secs");
-        }
+        bestScoreText.SetText(string.Format("{0:0}:{1:00}:{2:00}", bestTimeHours, bestTimeMinutes, bestTimeSeconds));
     }
 
     public void Play(string LevelName)

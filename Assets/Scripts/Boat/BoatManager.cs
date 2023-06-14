@@ -7,11 +7,15 @@ using UnityEngine.Audio;
 
 public class BoatManager : MonoBehaviour
 {
+    [Header("Currency")]
+    public int currentMoney;
+
     [Header("Health Values")]
     [SerializeField] private int maxHealth = 100;
 
     [Header("Text Reference")]
     [SerializeField] private TMP_Text healthText;
+    [SerializeField] private TMP_Text moneyText;
 
     [Header("Death References")]
     [SerializeField] private GameObject deathScreenObject;
@@ -21,7 +25,7 @@ public class BoatManager : MonoBehaviour
     [SerializeField] private AudioClip deathSoundEffect;
 
     private AudioSource audioSource;
-    private int currentHealth;
+    public int currentHealth;
 
     private Rigidbody boatRigidbody;
 
@@ -30,6 +34,7 @@ public class BoatManager : MonoBehaviour
         boatRigidbody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
 
+        currentMoney = 0;
         currentHealth = maxHealth;
 
         deathScreenObject.SetActive(false);
@@ -40,10 +45,18 @@ public class BoatManager : MonoBehaviour
     private void Update() 
     {
         healthText.SetText(currentHealth.ToString());
+        moneyText.SetText(currentMoney.ToString());
 
         if(currentHealth <= 0)
         {
+            currentHealth = 0;
             StartCoroutine(DeathSequence());
+        }
+
+        
+        if(currentHealth > 100)
+        {
+            currentHealth = 100;
         }
     }
 

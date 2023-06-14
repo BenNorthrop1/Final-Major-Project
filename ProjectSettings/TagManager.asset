@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Rock
   - Boat
+  - Cannons
+  - Map
+  - Target
   layers:
   - Default
   - TransparentFX
@@ -18,12 +21,12 @@ TagManager:
   - Respawn
   - Boat
   - Rocks
+  - Cannons
+  - CannonSpot
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Map
+  - PlayerCannonBall
+  - EnemyCannonBall
   - 
   - 
   - 

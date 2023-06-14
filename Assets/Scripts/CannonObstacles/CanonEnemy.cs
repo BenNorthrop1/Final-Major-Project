@@ -8,8 +8,7 @@ public class CanonEnemy : MonoBehaviour
     [Header("Detection Values")]
     [SerializeField] private float detectionRadius;
 
-    [Header("Death Values")]
-    [SerializeField] private float deathRadius;
+
 
 
     [Header("Detection Layers")]
@@ -18,13 +17,15 @@ public class CanonEnemy : MonoBehaviour
 
     [Header("Cannon References")]
     [SerializeField] private GameObject cannonObject;
-    [SerializeField] private Transform cannonShaft;
+    public Transform cannonShaft;
     [SerializeField] private Transform startPos;
     [SerializeField] private GameObject cannonBallPrefab;
+
 
     [Header("Cannon Values")]
     [SerializeField] private float cannonSpeed;
     [SerializeField] private float cannonCooldown;
+
     
     [Header("Cannon Effects")]
     [SerializeField] private ParticleSystem cannonSmoke;
@@ -39,6 +40,7 @@ public class CanonEnemy : MonoBehaviour
     private bool canShoot = true;
     private AudioSource audioSource;
 
+
     private void Awake() 
     {
         audioSource = GetComponent<AudioSource>();
@@ -48,12 +50,6 @@ public class CanonEnemy : MonoBehaviour
     {
         if(Physics.CheckSphere(transform.position, detectionRadius, playerLayer))
         {
-            print("Player Is In Radius");
-
-            if(Physics.CheckSphere(transform.position, deathRadius, playerLayer))
-            {
-                Destroy(cannonObject);
-            }
 
             //This searches the scene for the ships transform and puts it into a value.
             shipTransform = FindObjectOfType<BoatMovement>().transform;
@@ -65,7 +61,7 @@ public class CanonEnemy : MonoBehaviour
             RaycastHit hit;
             if(Physics.Linecast(startPos.position, shipBodyTransform, out hit, ignoreLayers))
             {
-                print("Blocked");
+                //blocked
             }
             else
             {
@@ -95,11 +91,11 @@ public class CanonEnemy : MonoBehaviour
         canShoot = true;
     }
 
+
+
     private void OnDrawGizmos() 
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position, deathRadius);
     }
 }
